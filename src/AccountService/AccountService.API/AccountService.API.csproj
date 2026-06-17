@@ -11,4 +11,9 @@
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.17"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\AccountService.Application\AccountService.Application.csproj" />
+      <ProjectReference Include="..\AccountService.Infrastructure\AccountService.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>
