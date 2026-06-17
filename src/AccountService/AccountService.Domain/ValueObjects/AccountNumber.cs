@@ -15,13 +15,13 @@ public record AccountNumber
     public static Result<AccountNumber> Create(string value)
     {
         if (string.IsNullOrWhiteSpace(value))
-            return Result<AccountNumber>.Failure(AccountErrors.EmptyAccountNumber());
+            return Result<AccountNumber>.Failure(AccountErrors.EmptyAccountNumber);
 
         if (value.Length != 20)
-            return Result<AccountNumber>.Failure(AccountErrors.InvalidAccountNumber());
+            return Result<AccountNumber>.Failure(AccountErrors.InvalidAccountNumber);
 
         if (!value.All(char.IsDigit))
-            return Result<AccountNumber>.Failure(AccountErrors.InvalidAccountNumberFormat());
+            return Result<AccountNumber>.Failure(AccountErrors.InvalidAccountNumberFormat);
 
         return Result<AccountNumber>.Success(new AccountNumber(value));
     }
