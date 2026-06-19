@@ -18,7 +18,7 @@ public record AccountNumber
             return Result<AccountNumber>.Failure(AccountErrors.EmptyAccountNumber);
 
         if (value.Length != 20)
-            return Result<AccountNumber>.Failure(AccountErrors.InvalidAccountNumber);
+            return Result<AccountNumber>.Failure(AccountErrors.InvalidAccountNumberLength);
 
         if (!value.All(char.IsDigit))
             return Result<AccountNumber>.Failure(AccountErrors.InvalidAccountNumberFormat);

@@ -30,7 +30,7 @@ public class Account
     public static Result<Account> Create(Guid userId, AccountNumber accountNumber, Currency currency)
     {
         if (userId == Guid.Empty)
-            return Result<Account>.Failure(AccountErrors.InvalidUserId);
+            return Result<Account>.Failure(AccountErrors.EmptyUserId);
         
         return Result<Account>.Success(new Account(userId, accountNumber, currency));
     }
