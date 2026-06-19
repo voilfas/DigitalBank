@@ -5,7 +5,7 @@ namespace AccountService.Domain.Errors;
 public static class AccountErrors
 {
     public static readonly Error EmptyAccountNumber = new("EmptyAccountNumber", "Account number is empty.");
-    public static readonly Error InvalidAccountNumber = new("InvalidAccountNumber", "Length account number != 20.");
+    public static readonly Error InvalidAccountNumberLength = new("InvalidAccountNumber", "Length account number != 20.");
     public static readonly Error InvalidAccountNumberFormat = new("InvalidAccountNumberFormat", "Account number doesn't contain digit.");
     public static readonly Error NegativeBalance = new("Account.NegativeBalance", "Balance cannot be negative.");
     public static readonly Error InsufficientFunds = new("Account.InsufficientFunds", "There are insufficient funds on the balance.");
